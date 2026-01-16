@@ -116,11 +116,11 @@ function setup() {
   engine = Engine.create();
   world = engine.world;
   
-  circle = Bodies.circle(400, 300, 30);
+  circle = Bodies.circle(1200, 300, 30);
   World.add(world, circle);
   
    constraint1 = Constraint.create({
-        pointA: { x: 400, y: 100 },
+        pointA: { x: 1200, y: 100 },
         bodyB: circle,
         stiffness: 0.01,
        render: {visible: false}
