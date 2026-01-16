@@ -169,7 +169,7 @@ function setup() {
   Render.run(render);
   
   Matter.Events.on(render, "afterRender", () => {
-    document.getElementById("delta").innerHTML = "Î”x = " + (Math.round(getCurrentLength(constraint1)-constraint1.length)/10).toString() + "m";
+    document.getElementById("delta").innerHTML = "Δx = " + (Math.round(getCurrentLength(constraint1)-constraint1.length)/10).toString() + "m";
     var force = Math.round((getCurrentLength(constraint1)*constraint1.stiffness)*100)/10;
       document.getElementById("force").innerHTML = "F = " + force.toString() + "N";
     var sina = (constraint1.bodyB.position.y - constraint1.pointA.y)/Math.sqrt(Math.pow(constraint1.bodyB.position.x - constraint1.pointA.x, 2) + Math.pow(constraint1.bodyB.position.y - constraint1.pointA.y, 2));
